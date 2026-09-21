@@ -1,5 +1,6 @@
 game_over = False
 health = 10
+import time
 
 print("WOULD YOU LIKE TO ENTER THE DUNGEON?")
 enter_dungeon = input("(yes/no):")
@@ -23,6 +24,8 @@ if method_over_pit == "climb":
     print("You try to climb across using the ivy thick on the walls, but you slip and nearly fall into the void. You manage to grab the ledge and pull youreself up at the last minute. (your lucky I'm feeling gracious today)")
 if method_over_pit == "rope":
     print("You tie your rope into a lasso and throw it across the pit, where it catches on a rock. The rock slips slightly as you pull yourself up, but you make it across in one piece.")
+
+time.sleep(5)
 
 level = 2
 print("You make your way through a door and into a room where the floor is covered in old human bones. As you step inside, the bones shift and move together, attachign themselves to form a human skeleton. It grabs a sword and turns towards you, flames lighting up it's eye sockets.")
@@ -52,6 +55,8 @@ if skeleton_battle_first_move == "flirt":
     print("You wink and trace the front of your pants suggestively. The skeleton drops his sword and his jaw hangs open. If he had a dick it would be up.")
     first_action_skeleton_vulnerable = True
 
+time.sleep(4)
+
 if first_action_skeleton_vulnerable == True:
     print("The skeleton is distracted by your flirtatious behavior, and is too captivated to move.")
 if first_action_parry == True: 
@@ -60,3 +65,4 @@ if first_action_vulnerable == True:
     print("The skeleton swings his sword down at you, completely caught off guard, and you take... yeesh... 3 points of damage.")
     health = health - 3
     print("health = ", health, "(thats just embarrasing)")
+
